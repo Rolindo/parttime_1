@@ -1,0 +1,241 @@
+* {
+				margin: 0;
+				padding: 0;
+			}
+
+			@keyframes move {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			body {
+				font-family: "microsoft yahei";
+				display: flex;
+				height: 100%;
+				background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+				background-blend-mode: multiply, multiply;
+				background-size: cover;
+				flex-direction: column;
+				font-weight: bolder;
+			}
+
+			h1 {
+				color: white;
+				text-align: center;
+			}
+
+			header h1 {
+				font-size: 25px;
+				font-weight: bolder;
+				color: black;
+			}
+
+			header {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			header img {
+				width: 12%;
+				/* transition: all 1.5s; */
+				animation: move 4s linear infinite;
+				transform-origin: 44% 52%
+			}
+
+			.art2 {
+				display: flex;
+				width: 60%;
+				flex: 1;
+				overflow: hidden;
+				background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+				flex-direction: column;
+				margin-bottom: 50px;
+				transition: all 0.3s;
+				margin: 25px auto;
+				padding: 15px;
+				border-radius: 25px;
+			}
+
+			.art2:hover {
+				box-shadow: black 4px 4px 10px;
+			}
+
+			.art2>p {
+				color: blue;
+				text-align: center;
+				font-weight: bolder;
+				margin-bottom: 35px;
+			}
+
+			.sec1 p {
+				color: black;
+				display: inline-block;
+			}
+
+			.art2>article {
+				display: flex;
+				justify-content: space-around;
+				margin-top: -25px;
+			}
+
+			.art2>article p {
+				font-size: 12px;
+			}
+
+			.art2+article+section {
+				width: 60%;
+			}
+
+			.sec2 {
+				margin-left: 25px;
+			}
+
+			.sec2 p:nth-child(1) {
+				font-weight: bolder;
+				text-align: center;
+			}
+
+			.sec2:nth-child(1) {
+				font-size: 25px;
+				font-weight: bolder;
+				text-align: center;
+			}
+
+			nav article {
+				display: flex;
+				width: 92%;
+				justify-content: center;
+				margin-top: 50px;
+				text-align: center;
+				align-items: baseline;
+			}
+
+			nav article p {
+				width: 7em;
+			}
+
+			nav article img {
+				transition: all 0.3s;
+			}
+
+			nav article img:hover {
+				transform: scale(1.2);
+			}
+
+			nav {
+				margin-left: 2%;
+			}
+
+			nav section {
+				margin-left: 5%;
+			}
+
+			table {
+				width: 100%;
+				border: 6px inset purple;
+				text-align: center;
+				font-weight: bolder;
+				border-collapse: collapse;
+			}
+
+			tr td {
+				border: 2px solid black;
+			}
+
+			main>section {
+				display: flex;
+				flex-direction: column;
+				width: 5%;
+				height: 16em;
+				background-color: #000000;
+				position: fixed;
+				left: 0;
+				bottom: 150px;
+				color: white;
+				transition: all 0.1s;
+				text-indent: 1em;
+			}
+
+			main>section h1 {
+				writing-mode: vertical-rl;
+				text-indent: 1em;
+			}
+
+			main>section ul {
+				display: none;
+				list-style-type: none;
+			}
+
+			main>section ul li {
+				margin-bottom: 5px;
+			}
+
+			main>section a {
+				color: white;
+			}
+
+			main>section:hover ul {
+				display: block;
+			}
+
+			main>section:hover {
+				width: 12%;
+				height: 19rem;
+				padding: 0 2rem;
+			}
+
+			@media only screen and (max-width: 500px) {
+				body {
+					font-size: 14px;
+				}
+
+				nav article {
+					font-size: 12px;
+					font-weight: 100;
+					text-indent: 0;
+				}
+
+				nav article img {
+					width: 30%;
+				}
+
+				nav section {
+					margin-left: 0.6rem;
+				}
+
+				table {
+					font-size: 0.4rem;
+					border: 6px inset purple;
+					text-align: center;
+					font-weight: bolder;
+					border-collapse: collapse;
+				}
+
+				tr td {
+					border: 2px solid black;
+				}
+
+				.art2 {
+					overflow: visible;
+					width: 70%;
+				}
+
+				main>section {
+					display: none;
+				}
+			}
+
+			footer section a {
+				display: block;
+				width: 80px;
+				height: 20px;
+				border: 1px solid #CCC;
+				background: #FFF;
+			}
